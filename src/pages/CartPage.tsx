@@ -12,17 +12,17 @@ const CartPage: React.FC = () => {
         <div>
             <TopBarComponent />
 
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {/* Coluna de Produtos no Carrinho */}
-                <div style={{ flex: 1, padding: '20px' }}>
-                    <Typography variant='h4'>Seu Carrinho</Typography>
+                <div style={{ padding: '20px' }}>
+                    <Typography variant='h4' style={{ marginBottom: '20px' }}>Seu Carrinho</Typography>
                     {cart.map((product) => (
                         <CartItem key={product.id} product={product} />
                     ))}
                 </div>
 
                 {/* Coluna de Resumo do Carrinho */}
-                <div style={{ flex: 1, padding: '20px' }}>
+                <div style={{ padding: '20px' }}>
                     <CartSummary />
                 </div>
             </div>

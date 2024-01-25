@@ -43,7 +43,7 @@ const CartItem: React.FC<CartItemProps> = ({ product }) => {
                 <Typography variant="body1">${product.price.toFixed(2)}</Typography>
             </div>
             <div>
-                <Button style={{ height: '55px' }}  variant="outlined" onClick={handleDecrement}>
+                <Button variant="outlined" onClick={handleDecrement}>
                     -
                 </Button>
                 <TextField
@@ -52,14 +52,14 @@ const CartItem: React.FC<CartItemProps> = ({ product }) => {
                     value={quantity}
                     InputProps={{ inputProps: { min: 1 } }}
                     onChange={() => { }} // Manter onChange para evitar um aviso de console
-                    style={{ margin: '0px', width: '60px' }}
+                    style={{  width: '40px' }}
                 />
-                <Button style={{ height: '55px' }} variant="outlined" onClick={handleIncrement}>
+                <Button variant="outlined" onClick={handleIncrement}>
                     +
                 </Button>
 
             </div>
-        </div>
+        </div >
     );
 };
 

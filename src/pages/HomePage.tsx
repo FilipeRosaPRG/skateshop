@@ -2,7 +2,6 @@ import TopBarComponent from '../components/TopBarComponent';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Button, Grid } from '@mui/material';
-import bannerImage1 from '../assets/images/banner-1.png'
 import productShapeImage from '../assets/images/shape_element.png'
 import ProductCard from '../components/ProductCard';
 import { Link } from 'react-router-dom'
@@ -44,38 +43,34 @@ export default function HomePage() {
                 </Box>
             </section>
 
-            <section className='section-banner-image-1'>
-                <Box >
-                    <img src={bannerImage1} width={'100%'} />
-                </Box>
-            </section>
-
             <section className='section-newsproduct'>
                 <Grid container spacing={0} marginTop={6}>
                     <Grid item xs={10}>
-                        <Typography variant='h4' style={{ fontStyle: 'normal', fontWeight: 400, marginLeft: '40px'}}>Lançamentos</Typography>
+                        <Typography variant='h4' style={{ fontStyle: 'normal', fontWeight: 400, marginLeft: '40px' }}>Lançamentos</Typography>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid container alignContent={'center'} textAlign={'center'}>
+                        <Grid item xs={2}>
 
-                        <Button
-                            style={{
-                                border: '1px solid #979797',
-                                color: '#979797',
-                                fontSize: '18px',
-                                fontStyle: 'normal',
-                                fontWeight: 400,
-                            }}
-                        >
-                            <Link
-                                to={'/products'}
+                            <Button
                                 style={{
-                                    textDecoration: 'none',
-                                    color: "#979797"
+                                    border: '1px solid #979797',
+                                    color: '#979797',
+                                    fontSize: '18px',
+                                    fontStyle: 'normal',
+                                    fontWeight: 400,
                                 }}
                             >
-                                Ver coleção
-                            </Link>
-                        </Button>
+                                <Link
+                                    to={'/products'}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: "#979797"
+                                    }}
+                                >
+                                    Ver coleção
+                                </Link>
+                            </Button>
+                        </Grid>
                     </Grid>
                     <Grid container >
                         {productData.map((product) => (

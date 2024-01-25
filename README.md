@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+markdown
+Copy code
+# SkateShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
+Este é um projeto SkateShop desenvolvido com Vite.js e React.
 
-Currently, two official plugins are available:
+## Pré-requisitos
+Certifique-se de ter o Node.js instalado. Você pode baixá-lo em: [https://nodejs.org/](https://nodejs.org/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/skateshop.git
+Acesse o diretório do projeto:
 
-## Expanding the ESLint configuration
+bash
+Copy code
+cd skateshop
+Instale as dependências:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+bash
+Copy code
+npm install
+Rodando o Projeto Localmente
+Execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
-- Configure the top-level `parserOptions` property like this:
+bash
+Copy code
+npm run dev
+O projeto estará disponível em http://localhost:3000.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Produção
+Para criar uma versão otimizada para produção, utilize o seguinte comando:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+bash
+Copy code
+npm run build
+Os arquivos otimizados serão gerados no diretório dist/.
+
+URL da Aplicação em Produção
+A aplicação está hospedada em https://skateshop-9b0a9.web.app/.
