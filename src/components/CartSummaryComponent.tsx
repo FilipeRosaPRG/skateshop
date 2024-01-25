@@ -3,12 +3,34 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { TextField } from '@mui/material';
 import { useCart } from '../Context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const CartSummary: React.FC = () => {
-    const { cart } = useCart();
+    const { cart, clearCart } = useCart();
+    const navigate = useNavigate();
 
     const subtotal = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
-    const total = subtotal; // Você pode adicionar cálculos adicionais aqui, se necessário
+    const total = subtotal;
+
+    const handleCheckout = async () => {
+        try {
+            // Lógica de checkout (simulação com um atraso)
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
+            // Limpar o carrinho após o checkout
+            clearCart();
+
+            // Exibir mensagem de sucesso
+            alert('Compra finalizada com sucesso! Carrinho limpo.');
+
+            // Redirecionar para a página inicial após o checkout
+            navigate('/');
+        } catch (error) {
+            // Tratar erros durante o checkout
+            console.error('Erro durante o checkout:', error);
+            alert('Erro durante o checkout. Por favor, tente novamente.');
+        }
+    };
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -37,7 +59,7 @@ const CartSummary: React.FC = () => {
                         </div>
                     </div>
 
-                    <Button variant="contained" color="primary">
+                    <Button variant="contained" color="primary" onClick={handleCheckout}>
                         Finalizar Compra
                     </Button>
                 </>
