@@ -1,78 +1,93 @@
-# SkateShop 
+# 🛹 Skateshop: Seu E-commerce de Skate Online!
 
-Este é um projeto React que simula uma loja de skate, onde você pode explorar produtos, adicionar itens ao carrinho e finalizar uma compra.
+Este projeto é um e-commerce online focado em produtos de skate.  Construído com React, ele oferece uma experiência de usuário moderna e intuitiva para navegar e comprar equipamentos de skate.
 
-## Executando o Projeto
+## 🚀 Tecnologias
 
-### Pré-requisitos
+Este projeto utiliza as seguintes tecnologias:
 
-Certifique-se de ter o Node.js e o npm instalados em seu sistema.
+* **Frontend:**
+    * [React](https://reactjs.org/)
+    * [TypeScript](https://www.typescriptlang.org/)
+    * [@emotion/react](https://emotion.sh/docs/introduction)
+    * [@emotion/styled](https://emotion.sh/docs/styled)
+    * [@mui/material](https://mui.com/material-ui/getting-started/)
+    * [@mui/icons-material](https://mui.com/material-ui/getting-started/usage/)
+    * [React Router DOM](https://reactrouter.com/en/main)
+    * [@vitejs/plugin-react](https://vitejs.dev/guide/using-plugins.html#plugin-react)
 
-### Passos
+* **Backend (Integração):**
+    * [Firebase](https://firebase.google.com/)
+    * [dotenv](https://www.npmjs.com/package/dotenv)
 
-1. **Clone este repositório para o seu sistema local:**
 
-    ```bash
-    git clone https://github.com/seu-usuario/skateshop.git
-    ```
+* **Ferramentas de Desenvolvimento:**
+    * [Vite](https://vitejs.dev/)
+    * [ESLint](https://eslint.org/)
+    * [TypeScript ESLint](https://typescript-eslint.io/)
+
+
+## ⚙️ Instalação e Configuração
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone &lt;repositorio_git&gt;
+   ```
 
 2. **Navegue até o diretório do projeto:**
 
-    ```bash
-    cd skateshop
-    ```
+   ```bash
+   cd skateshop
+   ```
 
-3. **Instale as dependências do projeto:**
+3. **Instale as dependências:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-4. **Execute o projeto:**
+4. **Configure o Firebase:**  Crie um projeto no Firebase e configure as credenciais no arquivo `firebase.json`.  Certifique-se de que o arquivo `.env` esteja configurado com as variáveis de ambiente necessárias.
 
-    ```bash
-    npm start
-    ```
+##  execução
 
-5. **Abra o navegador e acesse `http://localhost:3000` para visualizar o aplicativo.**
+1. **Inicie o servidor de desenvolvimento:**
 
-## URL em Produção
+   ```bash
+   npm run dev
+   ```
 
-A aplicação está hospedada em [https://skateshop-9b0a9.web.app/](https://skateshop-9b0a9.web.app/).
+   Acesse o aplicativo em `http://localhost:5173/`.
 
-## Design no Figma
-Você pode encontrar o design feito por mim no [Figma](https://www.figma.com/file/pTkk7x8YPh9HEujXYuqbKB/Untitled?type=design&node-id=0%3A1&mode=design&t=7dj88x5RYQIpMBrF-1)
 
-## Funcionalidades Principais
+## 📁 Estrutura de Arquivos
 
-- **Explorar Produtos:** Navegue pela página de produtos para ver os itens disponíveis.
-  
-- **Filtragem e Ordenação:** Utilize os filtros de pesquisa por nome, preço e data de inclusão. Ordene os produtos por preço ou data de inclusão.
+```
+skateshop/
+├── README.md
+├── firebase.json
+├── index.html
+├── package-lock.json
+├── package.json
+├── public/
+├── src/
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── ...
+```
 
-- **Adicionar ao Carrinho:** Adicione produtos ao carrinho de compras para posterior compra.
+## 🤝 Contribuindo
 
-- **Carrinho de Compras:** Visualize os itens adicionados ao carrinho, ajuste as quantidades e finalize a compra.
+Contribuições são bem-vindas!  Para contribuir, siga estes passos:
 
-## Tecnologias Utilizadas
+1. Faça um fork deste repositório.
+2. Crie uma branch com sua feature (`git checkout -b feature/nova-feature`).
+3. Faça suas alterações e commite-as (`git commit -m &quot;Adicione sua descrição&quot;`).
+4. Faça o push para a sua branch (`git push origin feature/nova-feature`).
+5. Crie um pull request.
 
-- React
-- TypeScript
-- Material-UI
-- React Router DOM
-- Context API (para gerenciamento de estado)
 
-## Estrutura do Projeto
+## 📄 Licença
 
-A estrutura de diretórios do projeto é organizada da seguinte forma:
-
-- `src/` - Contém os arquivos do código-fonte.
-  - `components/` - Componentes React reutilizáveis.
-  - `Context/` - Contexto para o gerenciamento de estado (como o carrinho de compras).
-  - `pages/` - Páginas principais do aplicativo.
-  - `assets/` - Recursos estáticos como imagens.
-
-## Autor
-
-Filipe Rosa - 
-[Github](https://github.com/FilipeRosaPRG)
-[Linkedin](https://www.linkedin.com/in/filiperosa11/)
+Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/).
